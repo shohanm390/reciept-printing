@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fida Pharma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Fida Pharma</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sell's</a></li>
+                <li><a href="#">Purchase</a></li>
+                <li><a href="#">Short list</a></li>
+                <li><a href="#">Store Room</a></li>
+                <li><a href="#">Product Entry</a></li>
+                <li><a href="#">Total Product</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="section" id="productSection">
+            <h2>Product Entry</h2>
+            <div class="form-container">
+                <input type="text" id="productName" placeholder="Product Name" class="input">
+                <input type="number" id="productQuantity" placeholder="Quantity" class="input">
+                <input type="number" id="productAmount" placeholder="Amount per Unit" class="input">
+                <input type="number" id="productDiscount" placeholder="Discount Percent" class="input">
+                <button onclick="addProduct()">Add Product</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Product's Name</th>
+                            <th>Quantity</th>
+                            <th>Amount per Unit</th>
+                            <th>Discount Percent</th>
+                            <th>Net Amount</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                        <!-- Rows will be added here dynamically -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total Amount</td>
+                            <td id="totalAmount">0.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+    </main>
+    <button onclick="printProductTable()">Print Table</button>
+    <script src="script.js"></script>
+</body>
+</html>
